@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Авторизация</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div class="container" id="auth-container">
+
+  <!-- РЕГИСТРАЦИЯ -->
+  <form id="register-form">
+
+    <h2>Регистрация</h2>
+
+    <input type="text" id="reg-name" placeholder="Имя" required>
+
+    <input type="email" id="reg-email" placeholder="Email" required>
+
+    <input type="tel" id="reg-phone" placeholder="+7 777 123 45 67" required>
+
+    <div class="password-box">
+      <input type="password" id="reg-password" placeholder="Пароль" required>
+      <span class="toggle-password" data-target="reg-password">👁</span>
+    </div>
+
+    <div class="password-box">
+      <input type="password" id="reg-password-confirm" placeholder="Подтвердите пароль" required>
+      <span class="toggle-password" data-target="reg-password-confirm">👁</span>
+    </div>
+
+    <label class="checkbox-label">
+      <input type="checkbox" id="reg-terms">
+      Согласен с правилами
+    </label>
+
+    <button type="submit">Зарегистрироваться</button>
+
+    <p class="switch-text">
+      Уже есть аккаунт?
+      <button type="button" id="to-login" class="link-btn">Войти</button>
+    </p>
+
+  </form>
+
+  <!-- ВХОД -->
+  <form id="login-form" class="hidden">
+
+    <h2>Вход</h2>
+
+    <input type="tel" id="login-phone" placeholder="Номер телефона" required>
+
+    <div class="password-box">
+      <input type="password" id="login-password" placeholder="Пароль" required>
+      <span class="toggle-password" data-target="login-password">👁</span>
+    </div>
+
+    <button type="submit">Войти</button>
+
+    <p class="switch-text">
+      Нет аккаунта?
+      <button type="button" id="to-register" class="link-btn">Зарегистрироваться</button>
+    </p>
+
+  </form>
+
+</div>
+
+<!-- ЛИЧНЫЙ КАБИНЕТ -->
+<div class="container hidden" id="profile">
+
+  <h2>Личный кабинет</h2>
+
+  <p id="welcome"></p>
+
+  <button id="logout">Выйти</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
